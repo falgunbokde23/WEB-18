@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+    
+    
+        <form action="" id="form">
+            <h2> Sing up</h2>
+            <input placeholder="Enter email" type="email"  id="email" />
+            <input placeholder="Enter Phone Number" type="number" id="phone"/>
+            <input placeholder="Create Password" type="password" id="pass"/>
+            <input placeholder="Conform Password" type="password" id="confpassword"/>
+            <input id="submit" type="submit"  value="Submit" />
+        </form>
+             
+</body>
+</html>
+<script>
+ document.querySelector("#form").addEventListener("submit",formsubmit)
+
+
+  function formsubmit(){
+      event.preventDefault()
+
+      fromObj={
+          personEmail:form.email.value,
+          personMobile:form.phone.value,
+          personpass:form.pass.value,
+          personpassword:form.confpassword.value,
+      };
+    //   if(fromObj.personEmail== null)
+    //   {
+    //     alert("Fill the Detailes")
+    //   }
+    //   else
+     if (fromObj.personpass == fromObj.personpassword)
+      {
+          window.location.href="login.html";
+      }
+      else {
+          alert ("Password Not Match");
+      }
+    
+    localStorage.setItem("userdata",JSON.stringify(fromObj));
+   }
+</script>
