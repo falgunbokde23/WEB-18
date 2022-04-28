@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+        }
+        button{
+            margin: auto;
+            justify-content: center;
+            display: flex;
+            padding: 20px;
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: blue;
+            background-color: teal;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            color: teal;
+            background-color: blue;
+
+        }
+        h1{
+            text-align: center;
+            margin: 50px 10px 50px 10px;
+        }
+    </style>
+  </head>
+  <body>
+      <h2 class="h2">This is Counter App</h2>
+    <h1></h1>
+    <button id="dec">Decrement</button>
+    <button id="inc">Increment</button>
+  </body>
+</html>
+
+<script>
+  var count = localStorage.getItem("counterValue") || 0;
+
+  document.querySelector("h1").innerText = count;
+
+  document.querySelector("#dec").addEventListener("click", decFun);
+
+  function decFun() {
+    count--;
+    document.querySelector("h1").innerText = count;
+    localStorage.setItem("counterValue", count);
+  }
+
+  document.querySelector("#inc").addEventListener("click", incFun);
+
+  function incFun() {
+    count++;
+    document.querySelector("h1").innerText = count;
+    localStorage.setItem("counterValue", count);
+  }
+</script>
