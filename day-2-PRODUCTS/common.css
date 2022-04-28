@@ -1,0 +1,42 @@
+#products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#products>div{
+    width: 20%;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#navbar{
+    width: 100% ;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: lightcyan;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+a {
+    text-decoration: none;
+    color: orange;
+    
+}
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgb(235, 213, 213);
+    color: rgb(78, 64, 156);
+    border-radius: 5px;
+}
+button:hover{
+    background-color: aqua;
+    color: black;
+}
